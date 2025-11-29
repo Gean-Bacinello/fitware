@@ -1,0 +1,64 @@
+
+body {
+    background-color: #f0f2f5;
+}
+
+.main-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-title {
+    color: #84c441;
+    font-weight: bold;
+}
+
+/* Botão de Ação Primária (Salvar, Atualizar) */
+.btn-custom-primary {
+    background-color: #84c441; /* Verde do título */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+.btn-custom-primary:hover {
+    background-color: #72a939;
+    color: white;
+}
+
+/* Botão de Ação Secundária (Cancelar) */
+.btn-custom-secondary {
+    background-color: #6c757d; /* Cinza padrão */
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    font-weight: 500;
+}
+.btn-custom-secondary:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+.form-text {
+    font-size: 0.875em;
+}
+
+/*
+================================================
+  CUSTOMIZAÇÃO DO FOCO DOS CAMPOS DO FORMULÁRIO
+================================================
+*/
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #84c441;
+    box-shadow: 0 0 0 0.2rem rgba(132, 196, 65, 0.15);
+    transform: translateY(-1px);
+}
+
+.form-control:hover:not(:focus),
+.form-select:hover:not(:focus) {
+    border-color: #adb5bd;
+}

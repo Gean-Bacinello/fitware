@@ -1,0 +1,86 @@
+
+        :root {
+            --fitware-green: #84c441; /* Verde principal */
+            --fitware-green-dark: #6a9c34; /* Verde mais escuro para hover */
+            --fitware-blue: #2d78a8; /* Azul do logo */
+            --fitware-text-secondary: #555;
+            --fitware-bg: #f4f6f7; /* Cor de fundo da página */
+            --fitware-input-bg: #fafff5; /* Fundo levemente esverdeado dos inputs */
+        }
+        body {
+            background-color: var(--fitware-bg);
+            font-family: Arial, sans-serif;
+        }
+        .form-title {
+            color: var(--fitware-green);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        .form-control-custom {
+            background-color: var(--fitware-input-bg);
+            border: 1px solid var(--fitware-green);
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+        }
+        .form-control-custom:focus {
+            background-color: white;
+            border-color: var(--fitware-green-dark);
+            box-shadow: 0 0 0 0.25rem rgba(132, 196, 65, 0.25);
+        }
+        .btn-fitware {
+            background-color: var(--fitware-green);
+            border-color: var(--fitware-green);
+            color: white;
+            padding: 0.75rem;
+            font-weight: 700;
+            border-radius: 0.5rem;
+            transition: background-color 0.2s;
+        }
+        .btn-fitware:hover {
+            background-color: var(--fitware-green-dark);
+            border-color: var(--fitware-green-dark);
+            color: white;
+        }
+
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .brand-text {
+            font-size: 2.5rem; /* Tamanho padrão da fonte */
+            font-weight: 700;
+        }
+        .brand-text-fit {
+            color: var(--fitware-blue);
+        }
+        .brand-text-ware {
+            color: var(--fitware-green);
+        }
+        /* Melhoria Mobile para o logo e texto da marca */
+        @media (max-width: 767.98px) {
+            .brand-text {
+                font-size: 2rem;
+            }
+            .project-logo img {
+                max-width: 150px;
+            }
+            /* Adicionado um espaçamento extra abaixo do logo no mobile */
+            .project-logo {
+                margin-bottom: 2rem; 
+            }
+        }
+       
+        .email-container {
+            max-width: 900px;
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+    .project-logo {
+    max-width: 400px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}

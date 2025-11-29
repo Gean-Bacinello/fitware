@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== MENU LATERAL ===== */
+
+nav.menu_lateral {
+    width: 80px;
+    height: 100vh;
+    background-color: #F8F8F8;
+    padding: 20px 0;
+    box-shadow: 3px 0 0 #84c441;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    z-index: 1000;
+}
+
+nav.menu_lateral.expandir {
+    width: 220px;
+}
+
+nav.menu_lateral .logo_container {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 30px;
+    height: 40px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.logo-text {
+    color: #616163;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+nav.menu_lateral.expandir .logo-text {
+    opacity: 1;
+}
+
+nav.menu_lateral ul {
+    height: calc(100% - 70px);
+    list-style: none;
+    padding: 20px 0 0 0;
+}
+
+nav.menu_lateral ul li.item_menu {
+    transition: background-color .2s ease-in-out;
+    border-radius: 10px 0px 0px 10px;
+    padding-left: 0;
+}
+
+nav.menu_lateral ul li.item_menu a {
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 4%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+nav.menu_lateral ul li.item_menu a .icon > i,
+nav.menu_lateral ul li.item_menu a .txt-link {
+    color: #616163;
+    transition: color 0.2s ease-in-out;
+}
+
+nav.menu_lateral ul li.item_menu:hover {
+    background-color: #84c441;
+}
+
+nav.menu_lateral ul li.item_menu:hover a .icon > i,
+nav.menu_lateral ul li.item_menu:hover a .txt-link {
+    color: white;
+}
+
+nav.menu_lateral ul li.item_menu.ativo {
+    background-color: #84c441;
+}
+
+nav.menu_lateral ul li.item_menu.ativo a .icon > i,
+nav.menu_lateral ul li.item_menu.ativo a .txt-link {
+    color: white;
+}
+
+nav.menu_lateral ul li.item_menu a .icon > i {
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+nav.menu_lateral ul li.item_menu a .txt-link {
+    margin-left: 20px;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+nav.menu_lateral.expandir ul li.item_menu a .txt-link {
+    opacity: 1;
+}
+
+/* ===== MAIN ===== */
+
+main {
+    background-color: #efefef;
+    min-height: 100vh;
+    margin-left: 80px;
+    transition: margin-left 0.5s;
+    padding: 40px;
+}
+
+main.expandido {
+    margin-left: 220px;
+}
+
+/* ===== RESPONSIVIDADE MOBILE ===== */
+
+@media (max-width: 768px) {
+    nav.menu_lateral {
+        width: 100%;
+        height: 60px;
+        top: auto;
+        bottom: 0;
+        overflow: visible;
+        padding: 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+    }
+
+    nav.menu_lateral.expandir {
+        width: 100%;
+    }
+
+    nav.menu_lateral .btn_expandir {
+        display: none;
+    }
+
+    nav.menu_lateral ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+    }
+
+    nav.menu_lateral ul li.item_menu {
+        flex-grow: 1;
+        border-radius: 0;
+        padding-left: 0;
+    }
+
+    nav.menu_lateral ul li.item_menu a {
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 0;
+        height: 100%;
+    }
+    
+    nav.menu_lateral ul li.item_menu a .icon > i {
+        font-size: 26px;
+        margin-left: 0;
+    }
+
+    nav.menu_lateral ul li.item_menu a .txt-link {
+        display: none;
+    }
+
+    nav.menu_lateral ul li.item_menu.ativo,
+    nav.menu_lateral ul li.item_menu:hover {
+        background-color: transparent;
+    }
+    
+    nav.menu_lateral ul li.item_menu.ativo a .icon > i,
+    nav.menu_lateral ul li.item_menu:hover a .icon > i {
+        color: #84c441;
+    }
+    
+    nav.menu_lateral ul li.item_menu a .icon > i {
+        color: #616163;
+    }
+
+    /* MAIN NO MOBILE */
+    main, main.expandido {
+        margin-left: 0;
+        margin-bottom: 0;
+        padding: 20px 15px 120px 15px;
+        min-height: calc(100vh - 60px);
+    }
+}

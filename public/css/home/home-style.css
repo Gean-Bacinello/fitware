@@ -1,0 +1,64 @@
+
+.project-logo {
+    max-width: 600px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+}
+
+/* Coluna da Esquerda com o gradiente */
+#branding-side {
+    background: linear-gradient(-45deg, #A3D322, #148A90, #0188c1);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.branding-content h1, .branding-content p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Container da Direita */
+.action-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 1.5rem;
+}
+
+/* Botão Primário (Login) */
+.btn-primary-custom {
+    background: linear-gradient(to right, #148A90, #0188c1);
+    color: white;
+    border: none;
+    padding: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(20, 138, 144, 0.4);
+}
+
+.btn-primary-custom:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(20, 138, 144, 0.6);
+}
+
+/* Botão Secundário (Registro) */
+.btn-secondary-custom {
+    background-color: #e9ecef;
+    color: #343a40;
+    border: 1px solid #ced4da;
+    padding: 0.85rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-custom:hover {
+    background-color: #d3d9df;
+    border-color: #b9c1c9;
+    transform: translateY(-2px);
+}

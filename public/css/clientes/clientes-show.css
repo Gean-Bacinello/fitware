@@ -1,0 +1,37 @@
+/* public/css/custom.css */
+
+/* Adiciona uma cor de fundo suave à página inteira */
+body {
+    background-color: #f8f9fa; /* Um cinza bem claro, padrão do Bootstrap para fundos */
+}
+
+/* Estilo para agrupar o rótulo e o dado, melhorando a leitura */
+.data-group {
+    padding: 0.75rem;
+    border-bottom: 1px solid #dee2e6; /* Linha separadora sutil */
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Efeito de hover para destacar a linha ao passar o mouse */
+.data-group:hover {
+    background-color: #f1f1f1;
+}
+
+/* Remove a borda do último item para um acabamento mais limpo */
+.data-group:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para o rótulo (ex: "Nome Completo:") */
+.data-group .data-label {
+    display: block;
+    font-weight: 600; /* Deixa o texto em negrito (semibold) */
+    color: #6c757d;   /* Um cinza escuro para o rótulo */
+    font-size: 0.9rem;
+}
+
+/* Estilo para o dado (ex: "João da Silva") */
+.data-group .data-value {
+    color: #212529; /* Preto padrão para o valor */
+    font-size: 1.1rem;
+}
