@@ -1,6 +1,10 @@
 <h1 align="center">Fitware</h1>
 
 <p align="center">
+<img width="300" height="300" alt="Image" src="https://github.com/user-attachments/assets/5513d377-d798-41cb-b135-25acdf5820f3" />
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/static/v1?label=STATUS&message=MVP%20FINALIZADO&color=GREEN&style=for-the-badge"/>
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"/>
   <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white"/>
@@ -48,14 +52,15 @@ O design foi pensado para ser limpo e intuitivo (Design Minimalista). Abaixo, al
 
 ### Visão do Gestor
 <p align="center">
-  <img src="assets/dashboard.png" alt="Dashboard Administrativo" width="400">
-  <img src="assets/cadastro.png" alt="Tela de Cadastro" width="400">
+    <img width="400" height="400" alt="Image Dasboard" src="https://github.com/user-attachments/assets/d46b87d0-21ea-40d2-9dac-95a9179938f8" />
+    <img width="400" height="400" alt="Tela de Home src="https://github.com/user-attachments/assets/3b64bb42-6f2a-45d4-8df6-527c9ce42ee3" />
 </p>
 
 ### Visão do Aluno e IA
 <p align="center">
-  <img src="assets/treino_mobile.png" alt="Visualização de Treino Mobile" width="250">
-  <img src="assets/chat_ia.png" alt="Assistente Virtual com IA Gemini" width="250">
+    <img width="292" height="609" alt="Visualização de Treino Mobile" src="https://github.com/user-attachments/assets/c75c1656-401c-46c6-a5af-d9443dd13609" />
+    <img width="292" height="609" alt="Assistente Virtual com IA Gemini" src="https://github.com/user-attachments/assets/cba75616-1bdf-49f6-81d7-172f72077426" />
+ 
 </p>
 
 ## Tecnologias Utilizadas
@@ -152,7 +157,7 @@ Siga as etapas abaixo.
 Projeto desenvolvido pelos discentes do Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas da **Fatec Ourinhos**.
 
 
-| [<img src="https://avatars.githubusercontent.com/u/placeholder?v=4" width=100><br><sub>Gean Corrêa Bacinello</sub>](#) | [<img src="https://avatars.githubusercontent.com/u/placeholder?v=4" width=100><br><sub>Rafael A. J. de Oliveira</sub>](#) | [<img src="https://avatars.githubusercontent.com/u/placeholder?v=4" width=100><br><sub>Rafael Kendi Uchida</sub>](#) |
+| [<img width="100" height="100" alt="Gean" src="https://github.com/user-attachments/assets/046b5e42-ea4a-4f58-b890-c5dceec57a72" /><br><sub>Gean Corrêa Bacinello<br><b>Desenvolvedor</b></sub>](#) | [<img width="100" height="100" alt="Rafael Juliano" src="https://github.com/user-attachments/assets/1251a7f7-ef6e-40a8-b3b8-43989d651b72" /><br><sub>Rafael A. J. de Oliveira<br><b>Tester</b></sub>](#) | [<img width="100" height="100" alt="Rafael Kendi" src="https://github.com/user-attachments/assets/06b6c0a2-6735-4fec-aacc-a398c311c256" /><br><sub>Rafael Kendi Uchida<br><b>Revisor</b></sub>](#) |
 | :---: | :---: | :---: |
 
 **Orientador:** Prof. Me. Wellington Eufrasio Camargo
