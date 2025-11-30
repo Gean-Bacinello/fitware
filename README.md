@@ -52,8 +52,8 @@ O design foi pensado para ser limpo e intuitivo (Design Minimalista). Abaixo, al
 
 ### Visão do Gestor
 <p align="center">
-    <img width="400" height="400" alt="Image Dasboard" src="https://github.com/user-attachments/assets/d46b87d0-21ea-40d2-9dac-95a9179938f8" />
-<img width="400" height="400" alt="Image" src="https://github.com/user-attachments/assets/3b64bb42-6f2a-45d4-8df6-527c9ce42ee3" />
+    <img width="600" height="600" alt="Image Dasboard" src="https://github.com/user-attachments/assets/d46b87d0-21ea-40d2-9dac-95a9179938f8" />
+<img width="600" height="600" alt="Image" src="https://github.com/user-attachments/assets/3b64bb42-6f2a-45d4-8df6-527c9ce42ee3" />
 </p>
 
 ### Visão do Aluno e IA
