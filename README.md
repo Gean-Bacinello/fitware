@@ -90,7 +90,7 @@ Siga as etapas abaixo.
 
 1.  **Clone o repositório**
     ```bash
-    git clone [https://github.com/Gean-Bacinello/fitware.git](https://github.com/Gean-Bacinello/fitware.git)
+    git clone https://github.com/Gean-Bacinello/fitware.git
     cd fitware
     ```
 
