@@ -89,13 +89,16 @@ Siga as etapas abaixo.
 ### Passo a Passo
 
 1.  **Clone o repositório**
+   
     ```bash
     git clone https://github.com/Gean-Bacinello/fitware.git
     cd fitware
     ```
 
 2.  **Configure as variáveis de ambiente**
+   
     Duplique o arquivo de exemplo e configure suas chaves (mailtrap e API Gemini).
+    
     ```bash
     cp .env.example .env
     ```
@@ -103,7 +106,9 @@ Siga as etapas abaixo.
 
 
 3.  **Recuperação de senha**
+   
     Acesse o site * [mailtrap](https://mailtrap.io/) crie uma conta, depois em sandboxes acesse my sandbox, copie suas informações para o .env
+    
     ```bash
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
@@ -116,6 +121,7 @@ Siga as etapas abaixo.
     ```
 
 4.  **Altere o .env**
+
     ```bash
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
@@ -126,6 +132,7 @@ Siga as etapas abaixo.
     ```
 
 5.  **Crie o banco dados no Mysql**
+    
     ```bash
     CREATE database db_fitware;
     ```
@@ -133,21 +140,25 @@ Siga as etapas abaixo.
 
 6.  **Instale as dependências do projeto**
     Acesse a pasta do projeto para rodar o Composer:
+
     ```bash
     composer install
     ```
 
 7.  **Gere a chave da aplicação e rode as migrações**
+    
     ```bash
     php artisan key:generate
     php artisan migrate
     ```
 8.  **Inicie o Sistema**
+    
     ```bash
     php artisan serve
     ```
 
 9.  **Acesse o sistema**
+    
     Abra o navegador e acesse: `http://localhost:8000`
 
 
