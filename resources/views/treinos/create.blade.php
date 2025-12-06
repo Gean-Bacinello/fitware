@@ -150,19 +150,29 @@ DEPENDÊNCIAS:
                             ${optionsHtml}
                         </select>
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
+                    <label class="form-label small">Divisão *</label>
+                    <select name="exercicios[${exercicioIndex}][divisao]" class="form-select" required>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                    </select>
+                    </div>
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Séries</label>
                         <input type="text" name="exercicios[${exercicioIndex}][series]" class="form-control" placeholder="Ex: 3" maxlength="10">
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Repetições</label>
                         <input type="text" name="exercicios[${exercicioIndex}][repeticoes]" class="form-control" placeholder="Ex: 10-12" maxlength="20">
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Carga</label>
                         <input type="text" name="exercicios[${exercicioIndex}][carga]" class="form-control" placeholder="Ex: 20kg" maxlength="20">
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Obs.</label>
                         <input type="text" name="exercicios[${exercicioIndex}][observacoes]" class="form-control" placeholder="Ex: Cadência" maxlength="255">
                     </div>
