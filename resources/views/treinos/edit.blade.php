@@ -4,10 +4,10 @@ ARQUIVO: resources/views/treinos/edit.blade.php
 AUTOR: Gean Corrêa Bacinello
 DATA DE CRIAÇÃO: --
 ÚLTIMA MODIFICAÇÃO: 09/10/2025
-VERSÃO: 1.0
+VERSÃO: 1.1 (Com Campo de Divisão Dinâmico)
 =====================================================================
 DESCRIÇÃO:
-   exibe a view para edição de um treino.
+   Exibe a view para edição de um treino existente.
 =====================================================================
 DEPENDÊNCIAS:
     - Banco de dados MySQL
@@ -118,6 +118,7 @@ DEPENDÊNCIAS:
 
 <script>
     const todosExercicios = @json($exercicios);
+    // Dados vindos do banco (incluindo pivot com a divisão antiga)
     const exerciciosExistentes = @json($ficha->treino->exercicios);
     let exercicioIndex = 0;
 
@@ -128,17 +129,21 @@ DEPENDÊNCIAS:
             alerta.remove();
         }
 
+        // Gera as opções do Select de Exercícios
         let optionsHtml = '<option value="">-- Selecione --</option>';
         todosExercicios.forEach(exercicio => {
             const selected = exercicioData && exercicio.id === exercicioData.id ? 'selected' : '';
             optionsHtml += `<option value="${exercicio.id}" ${selected}>${exercicio.nome_exercicio}</option>`;
         });
 
+        // Recupera dados existentes (pivot) ou deixa vazio
+        const divisao = exercicioData?.pivot?.divisao || ''; // <--- RECUPERA A DIVISÃO
         const series = exercicioData?.pivot?.series || '';
         const repeticoes = exercicioData?.pivot?.repeticoes || '';
         const carga = exercicioData?.pivot?.carga || '';
         const observacoes = exercicioData?.pivot?.observacoes || '';
 
+        // Template HTML da linha
         const novoExercicioHtml = `
             <div class="exercicio-bloco" id="exercicio-bloco-${exercicioIndex}">
                 <div class="d-flex justify-content-between align-items-center mb-3">
@@ -148,25 +153,43 @@ DEPENDÊNCIAS:
                     </button>
                 </div>
                 <div class="row g-3">
+                    
+                    {{-- Select do Exercício --}}
                     <div class="col-md-12">
                         <label class="form-label small">Exercício *</label>
                         <select name="exercicios[${exercicioIndex}][id]" class="form-select" required>
                             ${optionsHtml}
                         </select>
                     </div>
-                    <div class="col-6 col-md-3">
+
+                    {{-- NOVO CAMPO: DIVISÃO --}}
+                    <div class="col-6 col-md-2">
+                        <label class="form-label small">Divisão *</label>
+                        <select name="exercicios[${exercicioIndex}][divisao]" class="form-select" required>
+                            <option value="" disabled ${!divisao ? 'selected' : ''}>--</option>
+                            <option value="A" ${divisao === 'A' ? 'selected' : ''}>A</option>
+                            <option value="B" ${divisao === 'B' ? 'selected' : ''}>B</option>
+                            <option value="C" ${divisao === 'C' ? 'selected' : ''}>C</option>
+                            <option value="D" ${divisao === 'D' ? 'selected' : ''}>D</option>
+                            <option value="E" ${divisao === 'E' ? 'selected' : ''}>E</option>
+                            <option value="F" ${divisao === 'F' ? 'selected' : ''}>F</option>
+                        </select>
+                    </div>
+
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Séries</label>
                         <input type="text" name="exercicios[${exercicioIndex}][series]" class="form-control" placeholder="Ex: 3" value="${series}" maxlength="10">
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Repetições</label>
                         <input type="text" name="exercicios[${exercicioIndex}][repeticoes]" class="form-control" placeholder="Ex: 10-12" value="${repeticoes}" maxlength="20">
                     </div>
-                    <div class="col-6 col-md-3">
+                    <div class="col-6 col-md-2">
                         <label class="form-label small">Carga</label>
                         <input type="text" name="exercicios[${exercicioIndex}][carga]" class="form-control" placeholder="Ex: 20kg" value="${carga}" maxlength="20">
                     </div>
-                    <div class="col-6 col-md-3">
+                    {{-- Aumentei a obs para ocupar o resto da linha --}}
+                    <div class="col-12 col-md-4">
                         <label class="form-label small">Obs.</label>
                         <input type="text" name="exercicios[${exercicioIndex}][observacoes]" class="form-control" placeholder="Ex: Cadência" value="${observacoes}" maxlength="255">
                     </div>
@@ -204,12 +227,14 @@ DEPENDÊNCIAS:
         });
     }
 
+    // Carrega os exercícios existentes ao abrir a página
     window.addEventListener('load', function() {
         if (exerciciosExistentes && exerciciosExistentes.length > 0) {
             exerciciosExistentes.forEach(exercicio => {
                 adicionarExercicio(exercicio);
             });
         } else {
+            // Se não houver exercícios (erro de dados), adiciona um vazio
             adicionarExercicio();
         }
     });
