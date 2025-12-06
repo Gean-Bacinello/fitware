@@ -44,11 +44,7 @@ class ExercicioController extends Controller
             $query->where('grupo_muscular', $request->grupo_muscular);
         }
 
-        if ($request->filled('divisao')) {
-            
-            $query->where('divisao', $request->divisao);
-        }
-
+       
        
         $exercicios = $query->withCount('treinos') // Adiciona a contagem de treinos
             ->latest()
@@ -83,7 +79,6 @@ class ExercicioController extends Controller
         $request->validate([
             'nome_exercicio' => 'required|string|max:150',
             'grupo_muscular' => 'nullable|string|in:peito,costas,quadriceps,posterior,gluteo,panturrilha,ombro,biceps,triceps,abdomen,antebraco,adutores,abdutores,trapezio',
-            'divisao'        => 'nullable|string|in:A,B,C,D,E,F',
             'visibilidade'   => 'required|in:publico,privado',
             'observacao'     => 'nullable|string|max:200',
             'imagem'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
@@ -131,7 +126,6 @@ class ExercicioController extends Controller
         $request->validate([
             'nome_exercicio' => 'required|string|max:150',
             'grupo_muscular' => 'nullable|string|in:peito,costas,quadriceps,posterior,gluteo,panturrilha,ombro,biceps,triceps,abdomen,antebraco,adutores,abdutores,trapezio',
-            'divisao'        => 'nullable|string|in:A,B,C,D,E,F',
             'visibilidade'   => 'required|in:publico,privado',
             'observacao'     => 'nullable|string|max:200',
             'imagem'         => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:4096',
