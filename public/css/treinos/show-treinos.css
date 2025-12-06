@@ -49,3 +49,9 @@
             background-color: #84c441; /* Cor do tema */
             border-color: #84c441;
         }
+        
+        .bg-custom-division {
+            background-color: #84c441 !important;
+            color: white;
+            font-weight: bold;
+        }
