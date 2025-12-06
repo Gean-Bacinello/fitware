@@ -52,7 +52,7 @@ DEPENDÊNCIAS:
                 <div class="row g-3 align-items-end">
 
                     {{-- Filtro Grupo Muscular --}}
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="grupo_muscular" class="form-label" style="font-weight: 500;">Grupo Muscular</label>
                         <select name="grupo_muscular" id="grupo_muscular" class="form-select">
                             <option value="">Todos os Grupos</option>
@@ -73,19 +73,6 @@ DEPENDÊNCIAS:
                         </select>
                     </div>
 
-                    {{-- Filtro Divisão --}}
-                    <div class="col-md-3">
-                        <label for="divisao" class="form-label" style="font-weight: 500;">Divisão</label>
-                        <select name="divisao" id="divisao" class="form-select">
-                            <option value="">Todas as Divisões</option>
-                            <option value="A" {{ request('divisao') == 'A' ? 'selected' : '' }}>A</option>
-                            <option value="B" {{ request('divisao') == 'B' ? 'selected' : '' }}>B</option>
-                            <option value="C" {{ request('divisao') == 'C' ? 'selected' : '' }}>C</option>
-                            <option value="D" {{ request('divisao') == 'D' ? 'selected' : '' }}>D</option>
-                            <option value="E" {{ request('divisao') == 'E' ? 'selected' : '' }}>E</option>
-                            <option value="F" {{ request('divisao') == 'F' ? 'selected' : '' }}>F</option>
-                        </select>
-                    </div>
 
                     {{-- Filtro Search (ID ou Nome) --}}
                     <div class="col-md-4">
@@ -95,7 +82,7 @@ DEPENDÊNCIAS:
                     </div>
 
                     {{-- Botões de Ação --}}
-                    <div class="col-md-2 d-flex">
+                    <div class="col-md-4 d-flex">
                         <button class="btn btn-custom-dark-grey w-100" type="submit">
                             <i class="bi bi-search"></i> Filtrar
                         </button>
