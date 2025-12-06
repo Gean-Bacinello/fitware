@@ -279,7 +279,6 @@ DEPENDÊNCIAS:
                 });
             };
 
-            // Adicione esta nova função especializada
             const createStatusPieChart = (chartInfo) => {
                 if (!chartInfo) return;
                 
@@ -290,8 +289,8 @@ DEPENDÊNCIAS:
                         datasets: [{
                             data: chartInfo.data,
                             backgroundColor: [
-                                'rgba(196, 65,  65, 0.7)',  // Vermelho para Inativo
-                                'rgba(132, 196, 65, 0.7)'  // Verde para Ativo
+                                'rgba(132, 196, 65, 0.7)', // Verde para Ativo
+                                'rgba(196, 65,  65, 0.7)'  // Vermelho para Inativo
                                 
                             ],
                             hoverOffset: 4
