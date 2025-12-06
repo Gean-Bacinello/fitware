@@ -50,7 +50,7 @@ DEPENDÊNCIAS:
 
             {{-- LINHA 1: Nome, Grupo Muscular e Divisão --}}
             <div class="row">
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <label for="nome_exercicio" class="form-label">Nome do Exercício <span class="text-danger">*</span></label>
                     <input type="text" class="form-control @error('nome_exercicio') is-invalid @enderror" id="nome_exercicio" name="nome_exercicio" value="{{ old('nome_exercicio', $exercicio->nome_exercicio) }}" required>
                     @error('nome_exercicio')
@@ -61,7 +61,7 @@ DEPENDÊNCIAS:
                 {{-- =============================== --}}
                 {{--      CAMPO GRUPO MUSCULAR       --}}
                 {{-- =============================== --}}
-                <div class="col-md-4 mb-3">
+                <div class="col-md-6 mb-3">
                     <label for="grupo_muscular" class="form-label">Grupo Muscular</label>
                     <select class="form-select @error('grupo_muscular') is-invalid @enderror" id="grupo_muscular" name="grupo_muscular">
                         <option value="">Selecione um grupo</option>
@@ -85,24 +85,7 @@ DEPENDÊNCIAS:
                     @enderror
                 </div>
 
-                {{-- ========================== --}}
-                {{--      CAMPO DIVISÃO         --}}
-                {{-- ========================== --}}
-                <div class="col-md-4 mb-3">
-                    <label for="divisao" class="form-label">Divisão do Treino</label>
-                    <select class="form-select @error('divisao') is-invalid @enderror" id="divisao" name="divisao">
-                        <option value="">Selecione uma divisão</option>
-                        <option value="A" {{ old('divisao', $exercicio->divisao) == 'A' ? 'selected' : '' }}>A</option>
-                        <option value="B" {{ old('divisao', $exercicio->divisao) == 'B' ? 'selected' : '' }}>B</option>
-                        <option value="C" {{ old('divisao', $exercicio->divisao) == 'C' ? 'selected' : '' }}>C</option>
-                        <option value="D" {{ old('divisao', $exercicio->divisao) == 'D' ? 'selected' : '' }}>D</option>
-                        <option value="E" {{ old('divisao', $exercicio->divisao) == 'E' ? 'selected' : '' }}>E</option>
-                        <option value="F" {{ old('divisao', $exercicio->divisao) == 'F' ? 'selected' : '' }}>F</option>
-                    </select>
-                     @error('divisao')
-                        <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror
-                </div>
+                
             </div>
 
             {{-- LINHA 2: Observações (Largura total) --}}
