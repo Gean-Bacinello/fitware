@@ -41,6 +41,6 @@ class Treino extends Model
     {
         // Usa a tabela pivo 'treino_exercicios'
         return $this->belongsToMany(Exercicio::class, 'treino_exercicios')
-                    ->withPivot('series', 'repeticoes', 'carga', 'observacoes'); // Importante para acessar os dados da ficha
+                    ->withPivot('series', 'repeticoes', 'carga', 'observacoes', 'divisao'); // Importante para acessar os dados da ficha
     }
 }
