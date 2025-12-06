@@ -128,11 +128,11 @@ DEPENDÊNCIAS:
 .btn-primary {
   background-color: #84c441;
   border-color: #84c441;
-  color: #fff; /* mantém texto branco */
+  color: #fff; 
 }
 
 .btn-primary:hover {
-  background-color: #6da437; /* tom mais escuro pro hover */
+  background-color: #6da437; 
   border-color: #6da437;
 }
 
