@@ -86,6 +86,7 @@ class TreinoController extends Controller
             'exercicios.*.repeticoes'   => 'nullable|string|max:20',
             'exercicios.*.carga'        => 'nullable|string|max:20',
             'exercicios.*.observacoes'  => 'nullable|string|max:255',
+            'exercicios.*.divisao'      => 'required|string|in:A,B,C,D,E,F',
         ], [
             'exercicios.required'       => 'Adicione pelo menos um exercício ao treino.',
             'exercicios.*.id.required'  => 'Selecione um exercício válido.',
@@ -105,6 +106,7 @@ class TreinoController extends Controller
             //Anexar exercícios ao treino
             foreach ($validated['exercicios'] as $exercicioData) {
                 $treino->exercicios()->attach($exercicioData['id'], [
+                    'divisao'     => $exercicioData['divisao'],
                     'series'      => $exercicioData['series'] ?? null,
                     'repeticoes'  => $exercicioData['repeticoes'] ?? null,
                     'carga'       => $exercicioData['carga'] ?? null,
@@ -217,6 +219,7 @@ class TreinoController extends Controller
             'exercicios.*.repeticoes'  => 'nullable|string|max:20',
             'exercicios.*.carga'       => 'nullable|string|max:20',
             'exercicios.*.observacoes' => 'nullable|string|max:255',
+            'exercicios.*.divisao'     => 'required|string|in:A,B,C,D,E,F',
         ]);
 
         DB::beginTransaction();
@@ -232,6 +235,7 @@ class TreinoController extends Controller
 
             foreach ($validated['exercicios'] as $exercicioData) {
                 $ficha->treino->exercicios()->attach($exercicioData['id'], [
+                    'divisao'     => $exercicioData['divisao'],
                     'series'      => $exercicioData['series'] ?? null,
                     'repeticoes'  => $exercicioData['repeticoes'] ?? null,
                     'carga'       => $exercicioData['carga'] ?? null,
